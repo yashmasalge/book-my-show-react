@@ -1,0 +1,21 @@
+nav{
+    background-color: #333545;
+    padding: 1%;
+}
+
+NavDropdown{
+    color: unset;
+    text-decoration: unset;
+}
+form button{
+    color: #F84464;
+}
+
+.headNav{
+    background-color: #F5F5F5;
+}
+
+.container1{
+    font-weight: unset;
+    font-size: 2rem;
+}
