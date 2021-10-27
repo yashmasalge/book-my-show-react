@@ -25,7 +25,7 @@ function Registration() {
       }
     }
     // console.log(movieDetails)
-    const response = axios.post("http://localhost:5000/movie-register",movieDetails).then(()=>Swal.fire({
+    const response = axios.post("https://bms-backend1.herokuapp.com/movie-register",movieDetails).then(()=>Swal.fire({
       title: '<strong>Submitted!!</strong>',
       icon: 'success',
       showCloseButton: true,
