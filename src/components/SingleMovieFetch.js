@@ -29,7 +29,7 @@ function SingleMovieFetch() {
   const erase = () => {
     try {
       const response = axios.delete(
-        `https://bookmyshow-react.vercel.app/movies-delete/${_id}`
+        `https://bms-backend1.herokuapp.com/movies-delete/${_id}`
       );
       setData([response.data]);
       history.push("/");

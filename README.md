@@ -1,5 +1,7 @@
-Book My show clone
-Using ReactJS as frontend and Nodejs, express and MongoDB as backend
+Made using ReactJS as frontend and Nodejs, express and MongoDB as backend
 
-Fetching the movies data from backend and displaying it in frontend
-aslo by using ListMyShow can add new movies into the bookMyShow clone
+- Fetching the Movies Data from Backend
+- Displaying it in frontend
+- can Add new Movies using ListYourShow present in Navbar
+- can fetch a single movie
+- can delete a single movie by clicking delete button on card
