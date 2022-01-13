@@ -10,30 +10,37 @@ import Footer from "./components/Footer";
 import AllMoviesFetch from "./components/AllMoviesFetch";
 import SingleMovieFetch from "./components/SingleMovieFetch";
 import Registration from "./components/Registration";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  BrowserRouter,
+} from "react-router-dom";
 
 function App() {
   return (
-    <Router>
-      <div>
-        <Header />
-        <Switch>
-          <Route exact path="/">
-            <AllMoviesFetch />
-          </Route>
-          <Route exact path="/movies">
-            <AllMoviesFetch />
-          </Route>
-          <Route exact path="/movies/:_id">
-            <SingleMovieFetch />
-          </Route>
-          <Route exact path="/registration">
-            <Registration />
-          </Route>
-        </Switch>
-        <Footer />
-      </div>
-    </Router>
+    <BrowserRouter forceRefresh={true}>
+      <Router>
+        <div>
+          <Header />
+          <Switch>
+            <Route exact path="/">
+              <AllMoviesFetch />
+            </Route>
+            <Route exact path="/movies">
+              <AllMoviesFetch />
+            </Route>
+            <Route exact path="/movies/:_id">
+              <SingleMovieFetch />
+            </Route>
+            <Route exact path="/registration">
+              <Registration />
+            </Route>
+          </Switch>
+          <Footer />
+        </div>
+      </Router>
+    </BrowserRouter>
   );
 }
 

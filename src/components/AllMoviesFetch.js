@@ -13,12 +13,11 @@ function AllMoviesFetch() {
       const response = await axios.get(
         "https://bms-backend1.herokuapp.com/movies"
       );
-      console.log(response);
       setData(response.data);
     } catch (error) {
       console.error(error);
     }
-  }, []);
+  }, [data]);
 
   return (
     <div>

@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import Button from "react-bootstrap/Button";
 import { useHistory } from "react-router-dom";
+import Swal from "sweetalert2";
 
 function SingleMovieFetch() {
   const [data, setData] = useState([]);
@@ -28,10 +29,26 @@ function SingleMovieFetch() {
 
   const erase = () => {
     try {
-      const response = axios.delete(
-        `https://bms-backend1.herokuapp.com/movies-delete/${_id}`
-      );
-      setData([response.data]);
+      const response = axios
+        .delete(`https://bms-backend1.herokuapp.com/movies-delete/${_id}`)
+        .then(() =>
+          Swal.fire({
+            title: "<strong>Deleted!!</strong>",
+            icon: "success",
+            showCloseButton: true,
+          })
+        )
+        .then(() => {
+          setData([response.data]);
+          console.log(data);
+        })
+        .catch((err) =>
+          Swal.fire({
+            title: "<strong>Deleted!!!</strong>",
+            icon: "success",
+            showCloseButton: true,
+          })
+        );
       history.push("/");
     } catch (error) {
       console.error(error);
@@ -41,7 +58,7 @@ function SingleMovieFetch() {
   return (
     <div>
       <div>
-        <Container fluid style={{ padding: "5%", background: "pink" }}>
+        <Container fluid style={{ padding: "5%", background: "#D1D1D1" }}>
           <Row style={{ textAlign: "center" }}>
             {data.map((mov) => {
               return (
