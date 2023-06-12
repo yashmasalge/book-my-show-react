@@ -11,7 +11,7 @@ function AllMoviesFetch() {
   useEffect(async () => {
     try {
       const response = await axios.get(
-        "https://bms-backend1.herokuapp.com/movies"
+        "https://bms-backend-7x9p.onrender.com/movies"
       );
       setData(response.data);
     } catch (error) {

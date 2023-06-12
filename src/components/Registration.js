@@ -26,7 +26,10 @@ function Registration() {
     };
     // console.log(movieDetails)
     const response = axios
-      .post("https://bms-backend1.herokuapp.com/movie-register", movieDetails)
+      .post(
+        "https://bms-backend-7x9p.onrender.com/movie-register",
+        movieDetails
+      )
       .then(() =>
         Swal.fire({
           title: "<strong>Submitted!!</strong>",

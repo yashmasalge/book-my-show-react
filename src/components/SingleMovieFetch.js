@@ -16,7 +16,7 @@ function SingleMovieFetch() {
   useEffect(async () => {
     try {
       const response = await axios.get(
-        `https://bms-backend1.herokuapp.com/movies/${_id}`
+        `https://bms-backend-7x9p.onrender.com/movies/${_id}`
       );
       console.log(response);
       setData([response.data]);
